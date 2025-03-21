@@ -27,13 +27,13 @@ public class PhishingDetector {
 
 
     public boolean isLinkReportedAsPhishing (List<String> links) {
-        if (links != null) {
+
             for (String phishingLink : phishingLinks) {
                 if (links.contains(phishingLink)) {
                     return true;
                 }
             }
-        }
+
 
         return false;
     }
@@ -49,13 +49,13 @@ public class PhishingDetector {
     }
 
     public boolean isRedirect (List<String> links) {
-        if (links != null) {
+
             for (String redirectKeyword : redirectKeywords) {
                 if (links.contains(redirectKeyword)) {
                     return true;
                 }
             }
-        }
+
 
         return false;
     }
